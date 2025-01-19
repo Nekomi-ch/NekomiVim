@@ -1,5 +1,6 @@
 require "options"
 require "pluginlist"
 require "plugins"
+require "alpha-config"
 
-print("hello")
+print("Hello Nekomi!")
