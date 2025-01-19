@@ -24,6 +24,9 @@ local on_attach = function(_, bufnr)
   end, {})
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 --mason
 require("mason").setup()
 require("mason-lspconfig").setup_handlers({
@@ -50,3 +53,26 @@ require("mason-lspconfig").setup_handlers({
     end
 
 })
+
+--matlab
+require'lspconfig'.matlab_ls.setup{
+	cmd = {"matlab-language-server","--stdio"},
+	filetypes = {"matlab"},
+	root_markers = {".m"},
+	settings = {
+      MATLAB = {
+        indexWorkspace = false,
+        installPath = '',
+        matlabConnectionTiming = 'onStart',
+        telemetry = true,
+      },
+  },
+}
+
+--nix/nil 
+require'lspconfig'.nil_ls.setup{
+	cmd = {"nil"},
+	filetypes = {"nix"},
+	root_markers = {".nix"},
+}
+
