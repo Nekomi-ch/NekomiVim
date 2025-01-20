@@ -5,7 +5,9 @@ end
 
 local headerrand = math.random(3)
 local dashboard = require("alpha.themes.dashboard")
-
+dashboard.section.header.opts = {
+	position = "center",
+}
 
 
 if headerrand == 1 then
@@ -87,7 +89,7 @@ local quotetabl = {
 	Ganyu]],
 	[[If you make a promise you keep it, if you make a mistake you apologise, and if you give someone a dream you defend it to the end. 
 	-Childe]],
-	[[Fireworks are for now bur friends are forever. 
+	[[Fireworks are for now but friends are forever. 
 	Yoimiya]],
 	[[Don't put off until tommorow, what can you do today? 
 	-YaoYao]],

@@ -76,3 +76,10 @@ require'lspconfig'.nil_ls.setup{
 	root_markers = {".nix"},
 }
 
+--ltex-ls
+require'lspconfig'.ltex.setup{
+	cmd = {"ltex-ls"},
+	filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex", "pandoc", "quarto", "rmd", "context", "html", "xhtml", "mail", "text" },
+	root_markers = {".tex",".md"},
+}
+
