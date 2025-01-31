@@ -9,12 +9,14 @@ return {
 
 	--theme
 	{
-  	'AlexvZyl/nordic.nvim',
+  	'rmehri01/onenord.nvim',
     lazy = false,
     priority = 1000,
-    config = function()
-    	require('nordic').load()
-			vim.cmd.colorscheme('nordic')
+		config = function()
+      require('onenord').load()
+			require('onenord').setup({
+				theme = "dark",
+			})
     end
 	},
 
@@ -25,7 +27,7 @@ return {
 		config = function()
     	require("lualine").setup({
       	icons_enabled = true,
-        theme = 'nordic',
+        theme = 'onenord',
       })
     end,
 	},
@@ -119,7 +121,7 @@ return {
 
 	--yanky
 	{
-  "gbprod/yanky.nvim",
+  	"gbprod/yanky.nvim",
   	opts = {
   		highlight = { timer = 300},
   	},
