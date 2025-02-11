@@ -9,15 +9,13 @@ return {
 
 	--theme
 	{
-  	'rmehri01/onenord.nvim',
+  	'neko-night/nvim',
     lazy = false,
     priority = 1000,
 		config = function()
-      require('onenord').load()
-			require('onenord').setup({
-				theme = "dark",
-			})
-    end
+			require('nekonight').setup({style = "nord"})
+			require('nekonight').load()
+		end
 	},
 
 	--lualine
@@ -27,7 +25,7 @@ return {
 		config = function()
     	require("lualine").setup({
       	icons_enabled = true,
-        theme = 'onenord',
+        theme = 'nekonight',
       })
     end,
 	},
@@ -52,11 +50,6 @@ return {
 			'micangl/cmp-vimtex',
     },
   },
-
-	--close brackets
-	{
-		'rstacruz/vim-closer'
-	},
 
 	--alpha/dashboard
 	{
