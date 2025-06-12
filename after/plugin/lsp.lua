@@ -27,32 +27,39 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
---mason
-require("mason").setup()
-require("mason-lspconfig").setup_handlers({
+--mason (it somehow broke)
+--require("mason").setup()
+--require("mason-lspconfig").setup_handlers({
+--
+--		function(server_name)
+--        require("lspconfig")[server_name].setup {
+--            on_attach = on_attach,
+--            capabilities = capabilities
+--        }
+--    end,
+--
+--		["lua_ls"] = function()
+--				require('neodev').setup()
+--        require('lspconfig').lua_ls.setup {
+--            on_attach = on_attach,
+--            capabilities = capabilities,
+--            settings = {
+--                Lua = {
+--                    workspace = { checkThirdParty = false },
+--                    telemetry = { enable = false },
+--                },
+--            }
+--        }
+--    end
+--
+--})
 
-		function(server_name)
-        require("lspconfig")[server_name].setup {
-            on_attach = on_attach,
-            capabilities = capabilities
-        }
-    end,
-
-		["lua_ls"] = function()
-				require('neodev').setup()
-        require('lspconfig').lua_ls.setup {
-            on_attach = on_attach,
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    workspace = { checkThirdParty = false },
-                    telemetry = { enable = false },
-                },
-            }
-        }
-    end
-
-})
+--lua-language-server
+require'lspconfig'.lua_ls.setup{
+	--cmd = {"lua-language-server"},
+	filetypes = {"lua"},
+	root_markers = {".lua"},
+}
 
 --matlab
 require'lspconfig'.matlab_ls.setup{
