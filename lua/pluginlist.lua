@@ -148,6 +148,13 @@ return {
   	opts = {
   		highlight = { timer = 300},
   	},
-	}
+	},
+
+	--colorizer.lua
+	{
+		'norcalli/nvim-colorizer.lua',
+	},
+
+
 }
 
