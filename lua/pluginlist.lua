@@ -109,6 +109,7 @@ return {
 	--treesitter
 	{
 		'nvim-treesitter/nvim-treesitter',
+		'nvim-treesitter/playground',
 	},
 
 	--vimtex
@@ -154,7 +155,11 @@ return {
 	{
 		'norcalli/nvim-colorizer.lua',
 		config = function()
-			require 'colorizer'.setup()
+			require 'colorizer'.setup{
+			  '*'; -- Highlight all files, but customize some others.
+			  css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
+			  html = { names = false; } -- Disable parsing "names" like Blue or Gray
+			}
 		end
 	},
 
@@ -164,6 +169,11 @@ return {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
+	},
+
+	--My own theme test 
+	{
+		dir = "~/FujiIdol.nvim"
 	},
 
 

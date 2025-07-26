@@ -59,6 +59,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("q"," " .. " Exit","<cmd>qa<cr>"),
 }
 
+-- random quotes
+
 local quotetabl = {
 	--Gaming
 	[[Every journey has its final day. Don't rush. 
@@ -86,11 +88,11 @@ local quotetabl = {
 	[[It's up to me to decide who I want to be and to cut my own path, no one can tell me what to do. 
 	-Chiori]],
 	[[To exsist in the first place is a beautiful thing and that's enough isn't it? 
-	Ganyu]],
+	-Ganyu]],
 	[[If you make a promise you keep it, if you make a mistake you apologise, and if you give someone a dream you defend it to the end. 
 	-Childe]],
 	[[Fireworks are for now but friends are forever. 
-	Yoimiya]],
+	-Yoimiya]],
 	[[Don't put off until tommorow, what can you do today? 
 	-YaoYao]],
 
@@ -108,7 +110,11 @@ local quotetabl = {
 	[[Proprietary software is an injustice. 
 	-Richard Stallman]],
 	[[There is nothing wrong with wanting pay for work, or seeking to maximize one's income, as long as one does not use means that are destructive.
-	-Richard Stallman]]
+	-Richard Stallman]],
+	[[An idiot admires complexity, while a genius admires simplicity.
+	-Terry Davis]],
+	[[That bird has no idea what he’s looking at, and yet, what does the bird do? Does he panic? No, he just does the best he can.
+	-Terry Davis]],
 
 	--will add more
 }
