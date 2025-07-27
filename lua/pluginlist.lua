@@ -9,13 +9,13 @@ return {
 
 	--theme
 	{
-  	'neko-night/nvim',
-    lazy = false,
-    priority = 1000,
-		config = function()
-			require('nekonight').setup({style = "nord"})
-			require('nekonight').load()
-		end
+  	--'neko-night/nvim',
+    --lazy = false,
+    --priority = 1000,
+		--config = function()
+		--	require('nekonight').setup({style = "nord"})
+		--	require('nekonight').load()
+		--end
 	},
 
 	{
@@ -32,7 +32,7 @@ return {
     	require("lualine").setup({
 				options = {
       		icons_enabled = true,
-        	theme = 'nordfox',
+        	theme = 'NekomiNight',
 					section_separators = { left = '', right = '' },
   				component_separators = { left = '|', right = '|' }
 				},
@@ -122,6 +122,8 @@ return {
 			vim.g.vimtex_view_general_viewer = 'okular'
   	end
 	},
+    lazy = false,
+    priority = 1000,
 
 	--which-key
 	{
@@ -173,7 +175,9 @@ return {
 
 	--My own theme test 
 	{
-		dir = "~/FujiIdol.nvim"
+		dir = "~/FujiIdol.nvim",
+    lazy = false,
+    priority = 1000,
 	},
 
 
