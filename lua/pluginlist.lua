@@ -78,6 +78,7 @@ return {
       'hrsh7th/cmp-nvim-lsp',
 			'kdheepak/cmp-latex-symbols',
 			'micangl/cmp-vimtex',
+			'f3fora/cmp-spell',
     },
   },
 

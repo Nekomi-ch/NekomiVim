@@ -6,12 +6,13 @@ local icons = {
 	Function = "󰡱 ",
 	Keyword = " ",
 	Class = " ",
-	Constructor = " ",
+	Constructor = "󰡢 ",
 	Method = " ",
 	Module = " ",
 	Snippet = " ",
 	Field = "󱪲 ",
 	Enum = " ",
+	Property = " ",
 }
 
 cmp.setup({
@@ -26,5 +27,18 @@ cmp.setup({
 			vim_item.kind = (icons[vim_item.kind] or " ") .. " " .. vim_item.kind
 			return vim_item
 		end
-	}
+	},
+
+	sources = {
+  	{
+    	name = "spell",
+      option = {
+      	keep_all_entries = false,
+        enable_in_context = function()
+        	return true
+        end,
+        preselect_correct_word = true,
+    	},
+    },
+  },
 })
