@@ -55,14 +55,14 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 --})
 
 --lua-language-server
-require'lspconfig'.lua_ls.setup{
+vim.lsp.config['lua_ls'] = {
 	--cmd = {"lua-language-server"},
 	filetypes = {"lua"},
 	root_markers = {".lua"},
 }
 
 --matlab
-require'lspconfig'.matlab_ls.setup{
+vim.lsp.config['matlab_ls'] = {
 	cmd = {"matlab-language-server","--stdio"},
 	filetypes = {"matlab"},
 	root_markers = {".m"},
@@ -77,14 +77,14 @@ require'lspconfig'.matlab_ls.setup{
 }
 
 --nix/nil 
-require'lspconfig'.nil_ls.setup{
+vim.lsp.config['nil_ls'] = {
 	cmd = {"nil"},
 	filetypes = {"nix"},
 	root_markers = {".nix"},
 }
 
 --ltex-ls
-require'lspconfig'.ltex.setup{
+vim.lsp.config['ltex'] = {
 	cmd = {"ltex-ls"},
 	filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex", "pandoc", "quarto", "rmd", "context", "html", "xhtml", "mail", "text" },
 	root_markers = {".tex",".md"},
